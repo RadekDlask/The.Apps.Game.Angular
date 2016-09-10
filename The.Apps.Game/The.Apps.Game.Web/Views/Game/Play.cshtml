@@ -1,0 +1,11 @@
+﻿@using The.Apps.Game.Web.Resources
+
+@{
+    ViewBag.Title = @Labels.Game_Name;
+    Layout = MVC.Shared.Views._LayoutAngular;
+}
+
+<div ng-app="GameApp" ng-controller="GameCtrl" ng-strict-di>
+    <h2>{{gameName}}</h2>
+    <questionnaire-directive></questionnaire-directive>
+</div>

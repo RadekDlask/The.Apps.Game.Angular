@@ -1,0 +1,15 @@
+﻿@using The.Apps.Game.Web.Resources
+
+@model The.Apps.Game.Web.ViewModels.GameViewModels.GameDescriptionViewModel
+
+@{
+    ViewBag.Title = @Labels.GameDescription_Title;
+    Layout = MVC.Shared.Views._LayoutAngular;
+}
+<div ng-app="GameApp" ng-strict-di>
+    <h2>@Labels.GameDescription_Title</h2>
+    <h3>@Model.Name</h3>
+    @Html.ActionLink(@Labels.Game_Actions_Play, MVC.Game.Play(Model.Id))
+</div>
+
+

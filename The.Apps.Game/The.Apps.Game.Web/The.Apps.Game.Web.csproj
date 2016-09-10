@@ -145,10 +145,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\ContainerConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\ServicesConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\Api\GameController.cs" />
+    <Compile Include="Controllers\Api\QuestionnaireController.cs" />
+    <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TemplateController.cs" />
+    <Compile Include="Extensions\ViewModels\GameDescriptionExtensions.cs" />
+    <Compile Include="GameController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -156,6 +166,10 @@
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuestionnaireController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Labels.Designer.cs" />
     <Compile Include="SharedController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
@@ -164,6 +178,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
+    <Compile Include="TemplateController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\GameViewModels\GameDescriptionViewModel.cs" />
+    <Compile Include="ViewModels\GameViewModels\GameIndexViewModel.cs" />
+    <Compile Include="ViewModels\GameViewModels\GameListItemViewModel.cs" />
+    <Compile Include="ViewModels\GameViewModels\GameListViewModel.cs" />
+    <Compile Include="ViewModels\GameViewModels\GamePlay\GameMainViewModel.cs" />
+    <Compile Include="ViewModels\NamedViewModelBase.cs" />
+    <Compile Include="ViewModels\Questionnaire\ChoiceViewModel.cs" />
+    <Compile Include="ViewModels\Questionnaire\QuestionType.cs" />
+    <Compile Include="ViewModels\Questionnaire\QuestionViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -331,6 +357,11 @@
       <DependentUpon>jquery.validate.js</DependentUpon>
     </None>
     <None Include="T4MVC.tt.hooks.t4" />
+    <Content Include="Views\Shared\_LayoutAngular.cshtml" />
+    <Content Include="Views\Questionnaire\_Questionnaire.cshtml" />
+    <Content Include="Views\Game\Description.cshtml" />
+    <Content Include="Views\Game\Index.cshtml" />
+    <Content Include="Views\Game\Play.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -344,6 +375,14 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
+    <TypeScriptCompile Include="Scripts\apps\apps-game.ts" />
+    <TypeScriptCompile Include="Scripts\apps\bootstrappers-game.ts" />
+    <TypeScriptCompile Include="Scripts\components\common\services-logging.ts" />
+    <TypeScriptCompile Include="Scripts\components\game\controllers-game.ts" />
+    <TypeScriptCompile Include="Scripts\components\game\models-game.ts" />
+    <TypeScriptCompile Include="Scripts\components\questionnaire\controllers-questionnaire.ts" />
+    <TypeScriptCompile Include="Scripts\components\questionnaire\directives-questionnaire.ts" />
+    <TypeScriptCompile Include="Scripts\components\questionnaire\models-questionnaire.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-component-router.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
@@ -357,6 +396,15 @@
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\The.Apps.Game.Core\The.Apps.Game.Core.csproj">
+      <Project>{fa3b8d3b-109d-4984-8166-ad3097df06d3}</Project>
+      <Name>The.Apps.Game.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Labels.resx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

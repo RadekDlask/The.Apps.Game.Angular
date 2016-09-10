@@ -1,0 +1,14 @@
+﻿@using The.Apps.Game.Web.Resources
+
+<p>{{questionText}}</p>
+<div ng-show="questionType === 'choices'">
+    <ul>
+        <li ng-repeat="choice in choices track by choice.id">
+            {{choice.text}}
+        </li>
+    </ul>
+</div>
+<div ng-show="questionType === 'answer'">
+    <input ng-model="answerText" />
+    <button ng-show="answerText" ng-click="answerToQuestion()">@Labels.Questionnaire_Action_AnswerToQuestion</button>
+</div>

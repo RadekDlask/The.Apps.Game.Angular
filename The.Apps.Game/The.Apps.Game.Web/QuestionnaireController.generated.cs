@@ -25,7 +25,7 @@ using System.Web.Routing;
 using T4MVC;
 namespace T4MVC
 {
-    public class SharedController
+    public class QuestionnaireController
     {
 
         static readonly ViewsClass s_views = new ViewsClass();
@@ -38,13 +38,9 @@ namespace T4MVC
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
-                public readonly string _Layout = "_Layout";
-                public readonly string _LayoutAngular = "_LayoutAngular";
-                public readonly string Error = "Error";
+                public readonly string _Questionnaire = "_Questionnaire";
             }
-            public readonly string _Layout = "~/Views/Shared/_Layout.cshtml";
-            public readonly string _LayoutAngular = "~/Views/Shared/_LayoutAngular.cshtml";
-            public readonly string Error = "~/Views/Shared/Error.cshtml";
+            public readonly string _Questionnaire = "~/Views/Questionnaire/_Questionnaire.cshtml";
         }
     }
 

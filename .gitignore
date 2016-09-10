@@ -250,3 +250,21 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+/The.Apps.Game/The.Apps.Game.Web/Scripts/app/apps-game.js
+/The.Apps.Game/The.Apps.Game.Web/Scripts/components/questionnaire/models-questionnaire.js
+/The.Apps.Game/The.Apps.Game.Web/Scripts/components/questionnaire/directives-questionnaire.js
+/The.Apps.Game/The.Apps.Game.Web/Scripts/components/questionnaire/controllers-questionnaire.js
+/The.Apps.Game/The.Apps.Game.Web/Scripts/components/game/models-game.js
+/The.Apps.Game/The.Apps.Game.Web/Scripts/components/game/controllers-game.js
+/The.Apps.Game/The.Apps.Game.Web/Scripts/components/common/services-logging.js
+/The.Apps.Game/The.Apps.Game.Web/Scripts/app/bootstrappers-game.js
+/The.Apps.Game/The.Apps.Game.Web/Scripts/components/questionnaire/models-questionnaire.js.map
+/The.Apps.Game/The.Apps.Game.Web/Scripts/components/questionnaire/directives-questionnaire.js.map
+/The.Apps.Game/The.Apps.Game.Web/Scripts/components/questionnaire/controllers-questionnaire.js.map
+/The.Apps.Game/The.Apps.Game.Web/Scripts/components/game/models-game.js.map
+/The.Apps.Game/The.Apps.Game.Web/Scripts/components/game/controllers-game.js.map
+/The.Apps.Game/The.Apps.Game.Web/Scripts/components/common/services-logging.js.map
+/The.Apps.Game/The.Apps.Game.Web/Scripts/apps/bootstrappers-game.js.map
+/The.Apps.Game/The.Apps.Game.Web/Scripts/apps/bootstrappers-game.js
+/The.Apps.Game/The.Apps.Game.Web/Scripts/apps/apps-game.js.map
+/The.Apps.Game/The.Apps.Game.Web/Scripts/apps/apps-game.js

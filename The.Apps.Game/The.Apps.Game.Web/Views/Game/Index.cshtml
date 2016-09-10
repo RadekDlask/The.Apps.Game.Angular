@@ -1,0 +1,23 @@
+﻿@using The.Apps.Game.Web.Resources;
+@model The.Apps.Game.Web.ViewModels.GameViewModels.GameIndexViewModel
+
+@{
+    ViewBag.Title = @Labels.GameList_Title;
+}
+
+<h2>@Labels.GameList_Title</h2>
+@if (Model.GameList != null && Model.GameList.Games != null && Model.GameList.Games.Count > 0)
+{
+    <ul>
+        @foreach (var game in Model.GameList.Games)
+        {
+            <li>
+                @Html.ActionLink(game.Name, MVC.Game.Description(game.Id), new { target = "_blank"})
+            </li>            
+        }
+    </ul>    
+}
+else
+{
+    @Labels.GameList_Msg_NoAvailableGames
+}

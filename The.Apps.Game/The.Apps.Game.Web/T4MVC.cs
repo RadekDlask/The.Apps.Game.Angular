@@ -27,7 +27,10 @@ using T4MVC;
 [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
 public static partial class MVC
 {
+    public static The.Apps.Game.Web.Controllers.GameController Game = new The.Apps.Game.Web.Controllers.T4MVC_GameController();
     public static The.Apps.Game.Web.Controllers.HomeController Home = new The.Apps.Game.Web.Controllers.T4MVC_HomeController();
+    public static The.Apps.Game.Web.Controllers.TemplateController Template = new The.Apps.Game.Web.Controllers.T4MVC_TemplateController();
+    public static T4MVC.QuestionnaireController Questionnaire = new T4MVC.QuestionnaireController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }
 
@@ -76,6 +79,15 @@ namespace Links
         public static readonly string angular_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/angular.min.js") ? Url("angular.min.js") : Url("angular.js");
         public static readonly string angular_min_js = Url("angular.min.js");
         public static readonly string angular_min_js_map = Url("angular.min.js.map");
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public static class app {
+            public const string UrlPath = "~/Scripts/app";
+            public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+            public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+            public static readonly string apps_game_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/apps-game.min.js") ? Url("apps-game.min.js") : Url("apps-game.js");
+            public static readonly string bootstrappers_game_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/bootstrappers-game.min.js") ? Url("bootstrappers-game.min.js") : Url("bootstrappers-game.js");
+        }
+    
         public static readonly string bootstrap = Url("bootstrap");
         public static readonly string bootstrap_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/bootstrap.min.js") ? Url("bootstrap.min.js") : Url("bootstrap.js");
         public static readonly string bootstrap_min_js = Url("bootstrap.min.js");
@@ -83,6 +95,40 @@ namespace Links
         public static readonly string modernizr_2_6_2_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/modernizr-2.6.2.min.js") ? Url("modernizr-2.6.2.min.js") : Url("modernizr-2.6.2.js");
         public static readonly string respond_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/respond.min.js") ? Url("respond.min.js") : Url("respond.js");
         public static readonly string respond_min_js = Url("respond.min.js");
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public static class components {
+            public const string UrlPath = "~/Scripts/components";
+            public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+            public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public static class common {
+                public const string UrlPath = "~/Scripts/components/common";
+                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                public static readonly string services_logging_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/services-logging.min.js") ? Url("services-logging.min.js") : Url("services-logging.js");
+            }
+        
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public static class game {
+                public const string UrlPath = "~/Scripts/components/game";
+                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                public static readonly string controllers_game_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/controllers-game.min.js") ? Url("controllers-game.min.js") : Url("controllers-game.js");
+                public static readonly string models_game_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/models-game.min.js") ? Url("models-game.min.js") : Url("models-game.js");
+            }
+        
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public static class questionnaire {
+                public const string UrlPath = "~/Scripts/components/questionnaire";
+                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                public static readonly string controllers_questionnaire_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/controllers-questionnaire.min.js") ? Url("controllers-questionnaire.min.js") : Url("controllers-questionnaire.js");
+                public static readonly string directives_questionnaire_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/directives-questionnaire.min.js") ? Url("directives-questionnaire.min.js") : Url("directives-questionnaire.js");
+                public static readonly string models_questionnaire_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/models-questionnaire.min.js") ? Url("models-questionnaire.min.js") : Url("models-questionnaire.js");
+            }
+        
+        }
+    
         public static readonly string jquery = Url("jquery");
         public static readonly string jquery_1_10_2_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/jquery-1.10.2.min.js") ? Url("jquery-1.10.2.min.js") : Url("jquery-1.10.2.js");
         public static readonly string jquery_1_10_2_intellisense_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/jquery-1.10.2.intellisense.min.js") ? Url("jquery-1.10.2.intellisense.min.js") : Url("jquery-1.10.2.intellisense.js");
@@ -238,6 +284,36 @@ namespace Links
     {
         public static partial class Scripts 
         {
+            public static partial class app 
+            {
+                public static class Assets
+                {
+                }
+            }
+            public static partial class components 
+            {
+                public static partial class common 
+                {
+                    public static class Assets
+                    {
+                    }
+                }
+                public static partial class game 
+                {
+                    public static class Assets
+                    {
+                    }
+                }
+                public static partial class questionnaire 
+                {
+                    public static class Assets
+                    {
+                    }
+                }
+                public static class Assets
+                {
+                }
+            }
             public static partial class typings 
             {
                 public static partial class angularjs 

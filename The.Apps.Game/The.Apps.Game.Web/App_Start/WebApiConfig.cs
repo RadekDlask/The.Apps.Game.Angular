@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Newtonsoft.Json.Serialization;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Formatting;
 using System.Web.Http;
 
 namespace The.Apps.Game.Web
@@ -9,8 +11,14 @@ namespace The.Apps.Game.Web
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
+            // Let's configure a json respones format.
+            var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
+            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
+#if (DEBUG)
+            // We like to have a pretty json responses for debugging purposses.
+            jsonFormatter.Indent = true;
+#endif
             // Web API routes
             config.MapHttpAttributeRoutes();
 

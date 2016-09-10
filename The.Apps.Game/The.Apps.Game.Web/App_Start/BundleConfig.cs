@@ -26,6 +26,27 @@ namespace The.Apps.Game.Web
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            // This is complete script bundle used for angular apps
+            var angularScriptBundle = new ScriptBundle("~/bundles/angular").Include(
+                "~/Scripts/jquery-{version}.js",
+                "~/Scripts/angular.js",
+
+                "~/Scripts/apps/apps-game.js",
+
+                "~/Scripts/components/common/services-logging.js",
+
+                "~/Scripts/components/game/model-game.js",
+                "~/Scripts/components/game/controllers-game.js",
+
+                "~/Scripts/components/questionnaire/models-questionnaire.js",
+                "~/Scripts/components/questionnaire/controllers-questionnaire.js",
+                "~/Scripts/components/questionnaire/directives-questionnaire.js",
+
+                "~/Scripts/apps/bootstrappers-game.js");
+
+            angularScriptBundle.Transforms.Clear();
+            bundles.Add(angularScriptBundle);
         }
     }
 }
