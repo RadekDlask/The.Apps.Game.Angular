@@ -1,24 +1,5 @@
 ﻿"use strict";
-//namespace Questionnaire.Controllers {
-//    export interface IQuestionnaireScope extends ng.IScope {
-//        questionnaireService: Questionnaire.Services.QuestionnaireService;
-//        Ctrl: QuestionnaireCtrl;
-//    }
-
-//    export class QuestionnaireCtrl {
-//        static $inject = ["$scope", "questionnaireService"];
-//        constructor(protected $scope: IQuestionnaireScope,       
-//            public questionnaireService: Questionnaire.Services.QuestionnaireService) {
-//            //this.$scope.questionnaireService = questionnaireService;
-//        }
-//        public test = "aaaa";
-//        public getQuestion(): void {
-//            this.questionnaireService.getQuestion();
-//        }
-//    }
-//}
-
-namespace Questionnaire.Controllers {    
+namespace Questionnaire.Controllers {
     export class QuestionnaireCtrl {
         static $inject = ["$scope", "questionnaireService", "gameModelService"];
         constructor($scope: ng.IScope,
@@ -53,6 +34,5 @@ namespace Questionnaire.Controllers {
                 this.model.game.questionnaire = questionnaireDefinition;
             }
         }
-        
     }
 }

@@ -8,7 +8,6 @@ namespace Game.Services {
             gameModelService: Game.Services.GameModel.GameModelService) {
                 this.model = gameModelService;
         }
-        
         public model: Game.Services.GameModel.GameModelService;
         public initGame(id: number): void {
             this.$http

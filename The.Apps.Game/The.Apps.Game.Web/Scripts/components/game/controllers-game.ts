@@ -6,7 +6,7 @@ namespace Game.Controllers {
             private gameService: Game.Services.GameService,
             gameModelService: Game.Services.GameModel.GameModelService) {
             this.model = gameModelService;
-            this.initGame(1);            
+            this.initGame(1);
         }
 
         public model: Game.Services.GameModel.GameModelService;

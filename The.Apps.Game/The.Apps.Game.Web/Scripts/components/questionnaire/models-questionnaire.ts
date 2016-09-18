@@ -2,7 +2,7 @@
 namespace Questionnaire.Models {
     export class QuestionnaireDefinition {
         public static get QUESTION_TYPE_CHOICES(): number { return 0; }
-        public static get QUESTION_TYPE_TEXT(): number { return 1; }        
+        public static get QUESTION_TYPE_TEXT(): number { return 1; }
         public question: Question;
     }
     export class Question {
@@ -11,7 +11,7 @@ namespace Questionnaire.Models {
         public id: number;
         public choices: Array<Choice>;
     }
-    export class Choice {        
+    export class Choice {
         name: string;
         id: number;
         glyph: string;
