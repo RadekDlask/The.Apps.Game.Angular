@@ -1,22 +1,19 @@
 ﻿"use strict";
 namespace Game.Controllers {
-    export interface IGameScope extends ng.IScope {
-        gameModel: Game.Models.GameDefinition;
-        Ctrl: GameCtrl;
-    }
-
     export class GameCtrl {
-        static $inject = ["$scope", "$http"];
-        constructor(protected $scope: IGameScope,
-            protected $http: ng.IHttpService) {
-
+        static $inject = ["$scope", "gameService", "gameModelService"];
+        constructor(public $scope: ng.IScope,
+            private gameService: Game.Services.GameService,
+            gameModelService: Game.Services.GameModel.GameModelService) {
+            this.model = gameModelService;
+            this.initGame(1);            
         }
-        public getQuestion(): void {
-            this.$http
-                .get("/api/game/play/1")
-                .then((response: ng.IHttpPromiseCallbackArg<any>) => {
-                    this.$scope.gameModel = response.data;
-                });
+
+        public model: Game.Services.GameModel.GameModelService;
+        public isDebug: boolean;
+
+        public initGame(id: number): void {
+            this.gameService.initGame(id);
         }
     }
 }

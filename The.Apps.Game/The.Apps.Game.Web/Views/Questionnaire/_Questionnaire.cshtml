@@ -1,14 +1,25 @@
 ﻿@using The.Apps.Game.Web.Resources
+<button ng-click="questionnaireCtrl.getQuestion()">GO!!!!</button>
+<p>{{questionnaireCtrl.questionnaire.name}}</p>
+<p>{{questionnaireCtrl.questionnaire.question.name}}</p>
+<p>{{"isText: " + questionnaireCtrl.isQuestionTypeText()}}</p>
+<p>{{"isChoices: " + questionnaireCtrl.isQuestionTypeChoices()}}</p>
 
-<p>{{questionText}}</p>
-<div ng-show="questionType === 'choices'">
+<div ng-show="questionnaireCtrl.isQuestionTypeChoices()">
     <ul>
-        <li ng-repeat="choice in choices track by choice.id">
-            {{choice.text}}
+        <li ng-repeat="choice in questionnaireCtrl.questionnaire.question.choices track by choice.id">
+            <div class="choice" ng-class="{'selected' : choice.isSelected}" ng-click="choice.isSelected = !choice.isSelected">
+                <span class="{{'glyphicon glyphicon-' + choice.glyphicon}}">
+                    {{choice.name}}
+                </span>
+            </div>
         </li>
     </ul>
+    <span ng-click="questionnaireCtrl.answerToQuestion()" class="action glyphicon glyphicon-fire">
+        @Labels.Questionnaire_Action_AnswerToQuestion
+    </span>
 </div>
-<div ng-show="questionType === 'answer'">
-    <input ng-model="answerText" />
-    <button ng-show="answerText" ng-click="answerToQuestion()">@Labels.Questionnaire_Action_AnswerToQuestion</button>
+<div ng-show="questionnaireCtrl.isQuestionTypeText()">
+    <input ng-model="choice.answerText" />
+    <button ng-show="choice.answerText" ng-click="questionnaireCtrl.answerToQuestion()">@Labels.Questionnaire_Action_AnswerToQuestion</button>
 </div>

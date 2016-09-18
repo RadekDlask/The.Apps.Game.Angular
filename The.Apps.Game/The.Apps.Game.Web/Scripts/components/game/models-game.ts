@@ -1,7 +1,8 @@
 ﻿"use strict";
 namespace Game.Models {
     export class GameDefinition {
-        gameName: string;
+        name: string;
+        id: number;
         questionnaire: Questionnaire.Models.QuestionnaireDefinition;
     }
 }

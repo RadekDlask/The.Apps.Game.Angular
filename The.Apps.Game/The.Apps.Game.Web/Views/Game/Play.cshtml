@@ -5,7 +5,11 @@
     Layout = MVC.Shared.Views._LayoutAngular;
 }
 
-<div ng-app="GameApp" ng-controller="GameCtrl" ng-strict-di>
-    <h2>{{gameName}}</h2>
-    <questionnaire-directive></questionnaire-directive>
+<div ng-app="GameApp"  ng-strict-di id="app-container">
+    <div ng-controller="GameCtrl as gameCtrl">
+        <h2>{{gameCtrl.model.game.name}}</h2>
+        <questionnaire-directive></questionnaire-directive>
+        <span class="action glyphicon glyphicon-flash" ng-click="gameCtrl.isDebug = !gameCtrl.isDebug">debug</span>
+        <pre ng-show="gameCtrl.isDebug">{{ gameCtrl.model.game | json }}</pre>
+    </div>
 </div>

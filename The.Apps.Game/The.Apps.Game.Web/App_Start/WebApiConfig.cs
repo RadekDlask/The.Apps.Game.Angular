@@ -11,6 +11,10 @@ namespace The.Apps.Game.Web
     {
         public static void Register(HttpConfiguration config)
         {
+#if (DEBUG)
+            config.Formatters.Clear();
+            config.Formatters.Add(new JsonMediaTypeFormatter());
+#endif
             // Let's configure a json respones format.
             var jsonFormatter = config.Formatters.OfType<JsonMediaTypeFormatter>().First();
             jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();

@@ -80,8 +80,8 @@ namespace Links
         public static readonly string angular_min_js = Url("angular.min.js");
         public static readonly string angular_min_js_map = Url("angular.min.js.map");
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public static class app {
-            public const string UrlPath = "~/Scripts/app";
+        public static class apps {
+            public const string UrlPath = "~/Scripts/apps";
             public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
             public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
             public static readonly string apps_game_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/apps-game.min.js") ? Url("apps-game.min.js") : Url("apps-game.js");
@@ -106,6 +106,7 @@ namespace Links
                 public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
                 public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
                 public static readonly string services_logging_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/services-logging.min.js") ? Url("services-logging.min.js") : Url("services-logging.js");
+                public static readonly string services_url_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/services-url.min.js") ? Url("services-url.min.js") : Url("services-url.js");
             }
         
             [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -115,6 +116,8 @@ namespace Links
                 public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
                 public static readonly string controllers_game_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/controllers-game.min.js") ? Url("controllers-game.min.js") : Url("controllers-game.js");
                 public static readonly string models_game_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/models-game.min.js") ? Url("models-game.min.js") : Url("models-game.js");
+                public static readonly string services_game_model_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/services-game-model.min.js") ? Url("services-game-model.min.js") : Url("services-game-model.js");
+                public static readonly string services_game_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/services-game.min.js") ? Url("services-game.min.js") : Url("services-game.js");
             }
         
             [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
@@ -125,6 +128,7 @@ namespace Links
                 public static readonly string controllers_questionnaire_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/controllers-questionnaire.min.js") ? Url("controllers-questionnaire.min.js") : Url("controllers-questionnaire.js");
                 public static readonly string directives_questionnaire_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/directives-questionnaire.min.js") ? Url("directives-questionnaire.min.js") : Url("directives-questionnaire.js");
                 public static readonly string models_questionnaire_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/models-questionnaire.min.js") ? Url("models-questionnaire.min.js") : Url("models-questionnaire.js");
+                public static readonly string services_questionnaire_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/services-questionnaire.min.js") ? Url("services-questionnaire.min.js") : Url("services-questionnaire.js");
             }
         
         }
@@ -275,6 +279,9 @@ namespace Links
             public static readonly string glyphicons_halflings_regular_woff2 = Url("glyphicons-halflings-regular.woff2");
         }
     
+        public static readonly string game_less = Url("game.less");
+        public static readonly string game_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/game.min.css") ? Url("game.min.css") : Url("game.css");
+        public static readonly string game_min_css = Url("game.min.css");
         public static readonly string Site_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/Site.min.css") ? Url("Site.min.css") : Url("Site.css");
     }
 
@@ -284,7 +291,7 @@ namespace Links
     {
         public static partial class Scripts 
         {
-            public static partial class app 
+            public static partial class apps 
             {
                 public static class Assets
                 {

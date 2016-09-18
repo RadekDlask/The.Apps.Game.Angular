@@ -188,6 +188,7 @@
     <Compile Include="ViewModels\GameViewModels\GamePlay\GameMainViewModel.cs" />
     <Compile Include="ViewModels\NamedViewModelBase.cs" />
     <Compile Include="ViewModels\Questionnaire\ChoiceViewModel.cs" />
+    <Compile Include="ViewModels\Questionnaire\QuestionnaireViewModel.cs" />
     <Compile Include="ViewModels\Questionnaire\QuestionType.cs" />
     <Compile Include="ViewModels\Questionnaire\QuestionViewModel.cs" />
   </ItemGroup>
@@ -197,6 +198,12 @@
       <DependentUpon>bootstrap.css</DependentUpon>
     </Content>
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\game.css">
+      <DependentUpon>game.less</DependentUpon>
+    </Content>
+    <Content Include="Content\game.min.css">
+      <DependentUpon>game.css</DependentUpon>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -207,6 +214,11 @@
     <Content Include="Scripts\angular.js">
       <DependentUpon>angular</DependentUpon>
     </Content>
+    <Content Include="Content\game.less" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
     <None Include="Scripts\angular" />
     <Content Include="Scripts\angular.min.js">
       <DependentUpon>angular.js</DependentUpon>
@@ -377,6 +389,10 @@
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\apps\apps-game.ts" />
     <TypeScriptCompile Include="Scripts\apps\bootstrappers-game.ts" />
+    <TypeScriptCompile Include="Scripts\components\game\services-game-model.ts" />
+    <TypeScriptCompile Include="Scripts\components\questionnaire\services-questionnaire.ts" />
+    <TypeScriptCompile Include="Scripts\components\game\services-game.ts" />
+    <TypeScriptCompile Include="Scripts\components\common\services-url.ts" />
     <TypeScriptCompile Include="Scripts\components\common\services-logging.ts" />
     <TypeScriptCompile Include="Scripts\components\game\controllers-game.ts" />
     <TypeScriptCompile Include="Scripts\components\game\models-game.ts" />
