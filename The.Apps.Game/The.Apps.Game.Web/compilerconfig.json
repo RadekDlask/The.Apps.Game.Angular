@@ -2,5 +2,21 @@
   {
     "outputFile": "Content/game.css",
     "inputFile": "Content/game.less"
+  },
+  {
+    "outputFile": "Content/bootstrap/bootstrap-default.css",
+    "inputFile": "Content/bootstrap/bootstrap-default.less"
+  },
+  {
+    "outputFile": "Content/themes/black/variables-game.css",
+    "inputFile": "Content/themes/black/variables-game.less"
+  },
+  {
+    "outputFile": "Content/themes/black/variables.css",
+    "inputFile": "Content/themes/black/variables.less"
+  },
+  {
+    "outputFile": "Content/bootstrap/bootstrap-black.css",
+    "inputFile": "Content/bootstrap/bootstrap-black.less"
   }
 ]

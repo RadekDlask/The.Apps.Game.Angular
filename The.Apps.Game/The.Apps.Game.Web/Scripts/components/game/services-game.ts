@@ -16,5 +16,12 @@ namespace Game.Services {
                     this.model.game = response.data;
                 });
         }
+        public changeTheme(theme: string): void {
+            this.$http
+                .post(this.urlService.game.postTheme(theme), {})
+                .then((response: ng.IHttpPromiseCallbackArg<any>) => {
+                    location.reload();
+                });
+        }
     }
 }

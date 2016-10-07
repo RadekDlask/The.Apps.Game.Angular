@@ -21,6 +21,9 @@ namespace Core.Services {
         public getGameInit(id: number): string {
             return "/game/init?" + this.httpParamSerializer({"id": id});
         }
+        public postTheme(theme: string): string {
+            return "/game/settheme?" + this.httpParamSerializer({ "theme": theme });
+        }
     }
     export class GameApiNavigation {
         httpParamSerializer: angular.IHttpParamSerializer;

@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Theme testing";
+    Layout = "~/Views/Shared/_LayoutAngular.cshtml";
+}
+<h1>Theme testing</h1>
+<div ng-app="GameApp" ng-strict-di>
+    <div ng-controller="GameCtrl as gameCtrl">
+        <span>span buttons:</span>
+        <ul>
+            <li>
+                <span class="btn">btn</span>
+                <span class="btn btn-default">btn btn-default</span>
+                <span class="btn btn-primary">btn btn-primary</span>
+                <span class="btn btn-success">btn btn-success</span>
+                <span class="btn btn-warning">btn btn-warning</span>
+                <span class="btn btn-danger">btn btn-danger</span>
+            </li>
+        </ul>
+    </div>
+</div>

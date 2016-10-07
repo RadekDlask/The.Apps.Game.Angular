@@ -7,9 +7,11 @@
     Layout = MVC.Shared.Views._LayoutAngular;
 }
 <div ng-app="GameApp" ng-strict-di>
-    <h2>@Labels.GameDescription_Title</h2>
-    <h3>@Model.Name</h3>
-    @Html.ActionLink(@Labels.Game_Actions_Play, MVC.Game.Play(Model.Id))
+    <div ng-controller="GameCtrl as gameCtrl">
+        @Html.Partial(MVC.Shared.Views._Menu)
+        <h2>@Labels.GameDescription_Title</h2>
+        <h3>@Model.Name</h3>
+        @Html.ActionLink(@Labels.Game_Actions_Play, MVC.Game.Play(Model.Id))
+    </div>
 </div>
-
 

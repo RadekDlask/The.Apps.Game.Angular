@@ -15,5 +15,9 @@ namespace Game.Controllers {
         public initGame(id: number): void {
             this.gameService.initGame(id);
         }
+
+        public changeTheme(theme: string): void {
+            this.gameService.changeTheme(theme);
+        }
     }
 }

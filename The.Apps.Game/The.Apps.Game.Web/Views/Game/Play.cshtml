@@ -7,6 +7,7 @@
 
 <div ng-app="GameApp"  ng-strict-di id="app-container">
     <div ng-controller="GameCtrl as gameCtrl">
+        @Html.Partial(MVC.Shared.Views._Menu)
         <h2>{{gameCtrl.model.game.name}}</h2>
         <questionnaire-directive></questionnaire-directive>
         <span class="action glyphicon glyphicon-flash" ng-click="gameCtrl.isDebug = !gameCtrl.isDebug">debug</span>

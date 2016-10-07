@@ -58,6 +58,12 @@ namespace The.Apps.Game.Web.Controllers
 
         [NonAction]
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public virtual System.Web.Mvc.ActionResult SetTheme()
+        {
+            return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.SetTheme);
+        }
+        [NonAction]
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public virtual System.Web.Mvc.ActionResult Description()
         {
             return new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Description);
@@ -84,6 +90,7 @@ namespace The.Apps.Game.Web.Controllers
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNamesClass
         {
+            public readonly string SetTheme = "SetTheme";
             public readonly string Index = "Index";
             public readonly string Description = "Description";
             public readonly string Play = "Play";
@@ -92,12 +99,21 @@ namespace The.Apps.Game.Web.Controllers
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
+            public const string SetTheme = "SetTheme";
             public const string Index = "Index";
             public const string Description = "Description";
             public const string Play = "Play";
         }
 
 
+        static readonly ActionParamsClass_SetTheme s_params_SetTheme = new ActionParamsClass_SetTheme();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_SetTheme SetThemeParams { get { return s_params_SetTheme; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_SetTheme
+        {
+            public readonly string theme = "theme";
+        }
         static readonly ActionParamsClass_Description s_params_Description = new ActionParamsClass_Description();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ActionParamsClass_Description DescriptionParams { get { return s_params_Description; } }
@@ -138,6 +154,18 @@ namespace The.Apps.Game.Web.Controllers
     public partial class T4MVC_GameController : The.Apps.Game.Web.Controllers.GameController
     {
         public T4MVC_GameController() : base(Dummy.Instance) { }
+
+        [NonAction]
+        partial void SetThemeOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, string theme);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult SetTheme(string theme)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.SetTheme);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "theme", theme);
+            SetThemeOverride(callInfo, theme);
+            return callInfo;
+        }
 
         [NonAction]
         partial void IndexOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);

@@ -30,6 +30,7 @@ public static partial class MVC
     public static The.Apps.Game.Web.Controllers.GameController Game = new The.Apps.Game.Web.Controllers.T4MVC_GameController();
     public static The.Apps.Game.Web.Controllers.HomeController Home = new The.Apps.Game.Web.Controllers.T4MVC_HomeController();
     public static The.Apps.Game.Web.Controllers.TemplateController Template = new The.Apps.Game.Web.Controllers.T4MVC_TemplateController();
+    public static The.Apps.Game.Web.Controllers.TestController Test = new The.Apps.Game.Web.Controllers.T4MVC_TestController();
     public static T4MVC.QuestionnaireController Questionnaire = new T4MVC.QuestionnaireController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }
@@ -187,6 +188,9 @@ namespace Links
             public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
             public static readonly string alerts_less = Url("alerts.less");
             public static readonly string badges_less = Url("badges.less");
+            public static readonly string bootstrap_black_less = Url("bootstrap-black.less");
+            public static readonly string bootstrap_black_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/bootstrap-black.min.css") ? Url("bootstrap-black.min.css") : Url("bootstrap-black.css");
+            public static readonly string bootstrap_black_min_css = Url("bootstrap-black.min.css");
             public static readonly string bootstrap_less = Url("bootstrap.less");
             public static readonly string breadcrumbs_less = Url("breadcrumbs.less");
             public static readonly string button_groups_less = Url("button-groups.less");
@@ -283,6 +287,26 @@ namespace Links
         public static readonly string game_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/game.min.css") ? Url("game.min.css") : Url("game.css");
         public static readonly string game_min_css = Url("game.min.css");
         public static readonly string Site_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/Site.min.css") ? Url("Site.min.css") : Url("Site.css");
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public static class themes {
+            public const string UrlPath = "~/Content/themes";
+            public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+            public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public static class black {
+                public const string UrlPath = "~/Content/themes/black";
+                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                public static readonly string variables_game_less = Url("variables-game.less");
+                public static readonly string variables_game_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/variables-game.min.css") ? Url("variables-game.min.css") : Url("variables-game.css");
+                public static readonly string variables_game_min_css = Url("variables-game.min.css");
+                public static readonly string variables_less = Url("variables.less");
+                public static readonly string variables_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/variables.min.css") ? Url("variables.min.css") : Url("variables.css");
+                public static readonly string variables_min_css = Url("variables.min.css");
+            }
+        
+        }
+    
     }
 
     
@@ -360,6 +384,18 @@ namespace Links
             }
             public static partial class fonts 
             {
+                public static class Assets
+                {
+                }
+            }
+            public static partial class themes 
+            {
+                public static partial class black 
+                {
+                    public static class Assets
+                    {
+                    }
+                }
                 public static class Assets
                 {
                 }

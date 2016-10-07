@@ -155,6 +155,7 @@
     <Compile Include="Controllers\GameController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TemplateController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Extensions\ViewModels\GameDescriptionExtensions.cs" />
     <Compile Include="GameController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
@@ -181,6 +182,9 @@
     <Compile Include="TemplateController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
+    <Compile Include="TestController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\GameViewModels\GameDescriptionViewModel.cs" />
     <Compile Include="ViewModels\GameViewModels\GameIndexViewModel.cs" />
     <Compile Include="ViewModels\GameViewModels\GameListItemViewModel.cs" />
@@ -197,12 +201,30 @@
     <Content Include="Content\bootstrap.min.css">
       <DependentUpon>bootstrap.css</DependentUpon>
     </Content>
+    <Content Include="Content\bootstrap\bootstrap-black.css">
+      <DependentUpon>bootstrap-black.less</DependentUpon>
+    </Content>
+    <Content Include="Content\bootstrap\bootstrap-black.min.css">
+      <DependentUpon>bootstrap-black.css</DependentUpon>
+    </Content>
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\game.css">
       <DependentUpon>game.less</DependentUpon>
     </Content>
     <Content Include="Content\game.min.css">
       <DependentUpon>game.css</DependentUpon>
+    </Content>
+    <Content Include="Content\themes\black\variables-game.css">
+      <DependentUpon>variables-game.less</DependentUpon>
+    </Content>
+    <Content Include="Content\themes\black\variables-game.min.css">
+      <DependentUpon>variables-game.css</DependentUpon>
+    </Content>
+    <Content Include="Content\themes\black\variables.css">
+      <DependentUpon>variables.less</DependentUpon>
+    </Content>
+    <Content Include="Content\themes\black\variables.min.css">
+      <DependentUpon>variables.css</DependentUpon>
     </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -219,6 +241,9 @@
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
+    <Content Include="Content\themes\black\variables.less" />
+    <Content Include="Content\themes\black\variables-game.less" />
+    <Content Include="Content\bootstrap\bootstrap-black.less" />
     <None Include="Scripts\angular" />
     <Content Include="Scripts\angular.min.js">
       <DependentUpon>angular.js</DependentUpon>
@@ -374,6 +399,8 @@
     <Content Include="Views\Game\Description.cshtml" />
     <Content Include="Views\Game\Index.cshtml" />
     <Content Include="Views\Game\Play.cshtml" />
+    <Content Include="Views\Shared\_Menu.cshtml" />
+    <Content Include="Views\Test\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

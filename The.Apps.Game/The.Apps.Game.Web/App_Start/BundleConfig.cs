@@ -32,6 +32,10 @@ namespace The.Apps.Game.Web
                       "~/Content/bootstrap.css",
                       "~/Content/game.css"));
 
+            bundles.Add(new StyleBundle("~/Content/game/css-black").Include(
+                      "~/Content/bootstrap/bootstrap-black.css",
+                      "~/Content/game.css"));
+
             // This is the script bundle used for angular game apps.
             var angularScriptBundle = new ScriptBundle("~/bundles/angular").Include(
                 "~/Scripts/jquery-{version}.js",
