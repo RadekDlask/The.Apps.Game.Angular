@@ -9,7 +9,12 @@
     <div ng-controller="GameCtrl as gameCtrl">
         @Html.Partial(MVC.Shared.Views._Menu)
         <h2>{{gameCtrl.model.game.name}}</h2>
-        <questionnaire-directive></questionnaire-directive>
+        <div class="questionnaire-container" ng-show="gameCtrl.isQuestionnaireShowed">
+            <questionnaire-directive></questionnaire-directive>
+        </div>
+        <div class="board-container">
+            <board-directive></board-directive>
+        </div>        
         <span class="action glyphicon glyphicon-flash" ng-click="gameCtrl.isDebug = !gameCtrl.isDebug">debug</span>
         <pre ng-show="gameCtrl.isDebug">{{ gameCtrl.model.game | json }}</pre>
     </div>

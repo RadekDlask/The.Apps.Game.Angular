@@ -76,12 +76,14 @@ namespace The.Apps.Game.Web.Controllers
         public class ActionNamesClass
         {
             public readonly string Questionnaire = "Questionnaire";
+            public readonly string Board = "Board";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
             public const string Questionnaire = "Questionnaire";
+            public const string Board = "Board";
         }
 
 
@@ -112,6 +114,17 @@ namespace The.Apps.Game.Web.Controllers
         {
             var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Questionnaire);
             QuestionnaireOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void BoardOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult Board()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Board);
+            BoardOverride(callInfo);
             return callInfo;
         }
 

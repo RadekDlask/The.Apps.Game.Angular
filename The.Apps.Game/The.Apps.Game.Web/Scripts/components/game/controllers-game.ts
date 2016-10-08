@@ -16,6 +16,10 @@ namespace Game.Controllers {
             this.gameService.initGame(id);
         }
 
+        public get isQuestionnaireShowed(): boolean {
+            return this.model.game.state.currentState === Game.Models.GameMainState.STATE_QUESTIONNAIRE;
+        }
+
         public changeTheme(theme: string): void {
             this.gameService.changeTheme(theme);
         }

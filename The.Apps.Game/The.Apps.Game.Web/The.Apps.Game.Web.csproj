@@ -150,6 +150,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\ServicesConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BoardController.generated.cs">
+      <DependentUpon>T4MVC.tt</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\Api\GameController.cs" />
     <Compile Include="Controllers\Api\QuestionnaireController.cs" />
     <Compile Include="Controllers\GameController.cs" />
@@ -185,11 +188,15 @@
     <Compile Include="TestController.generated.cs">
       <DependentUpon>T4MVC.tt</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\Board\BoardViewModel.cs" />
     <Compile Include="ViewModels\GameViewModels\GameDescriptionViewModel.cs" />
     <Compile Include="ViewModels\GameViewModels\GameIndexViewModel.cs" />
     <Compile Include="ViewModels\GameViewModels\GameListItemViewModel.cs" />
     <Compile Include="ViewModels\GameViewModels\GameListViewModel.cs" />
+    <Compile Include="ViewModels\GameViewModels\GamePlay\GameMainState.cs" />
+    <Compile Include="ViewModels\GameViewModels\GamePlay\GameMainStateViewModel.cs" />
     <Compile Include="ViewModels\GameViewModels\GamePlay\GameMainViewModel.cs" />
+    <Compile Include="ViewModels\GameViewModels\GamePlay\GameResponseViewModel.cs" />
     <Compile Include="ViewModels\NamedViewModelBase.cs" />
     <Compile Include="ViewModels\Questionnaire\ChoiceViewModel.cs" />
     <Compile Include="ViewModels\Questionnaire\QuestionnaireViewModel.cs" />
@@ -401,6 +408,7 @@
     <Content Include="Views\Game\Play.cshtml" />
     <Content Include="Views\Shared\_Menu.cshtml" />
     <Content Include="Views\Test\Index.cshtml" />
+    <Content Include="Views\Board\_Board.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -416,6 +424,10 @@
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\apps\apps-game.ts" />
     <TypeScriptCompile Include="Scripts\apps\bootstrappers-game.ts" />
+    <TypeScriptCompile Include="Scripts\components\board\controllers-board.ts" />
+    <TypeScriptCompile Include="Scripts\components\board\directives-board.ts" />
+    <TypeScriptCompile Include="Scripts\components\board\models-board.ts" />
+    <TypeScriptCompile Include="Scripts\components\board\services-board.ts" />
     <TypeScriptCompile Include="Scripts\components\game\services-game-model.ts" />
     <TypeScriptCompile Include="Scripts\components\questionnaire\services-questionnaire.ts" />
     <TypeScriptCompile Include="Scripts\components\game\services-game.ts" />

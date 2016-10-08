@@ -49,12 +49,17 @@ namespace The.Apps.Game.Web
                 "~/Scripts/components/game/services-game-model.js",
                 "~/Scripts/components/game/model-game.js",
                 "~/Scripts/components/game/controllers-game.js",
-                "~/Scripts/components/game/services-game.js",
+                "~/Scripts/components/game/services-game.js",                
 
                 "~/Scripts/components/questionnaire/models-questionnaire.js",
                 "~/Scripts/components/questionnaire/controllers-questionnaire.js",
                 "~/Scripts/components/questionnaire/directives-questionnaire.js",
                 "~/Scripts/components/questionnaire/services-questionnaire.js",
+
+                "~/Scripts/components/board/models-board.js",
+                "~/Scripts/components/board/controllers-board.js",
+                "~/Scripts/components/board/directives-board.js",
+                "~/Scripts/components/board/services-board.js",
 
                 "~/Scripts/apps/bootstrappers-game.js");
 

@@ -1,0 +1,12 @@
+﻿@using The.Apps.Game.Web.Resources
+<table class="board">
+    <tbody>
+        <tr ng-init="columns = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']"></tr>
+        <tr ng-repeat="row in boardCtrl.board" ng-init="rowId = 0;">
+            <td>{{rowId++}}</td>
+            <td ng-repeat="cell in row">
+                <div class="board-field">{{cell.figureId}}</div>
+            </td>
+        </tr>
+    </tbody>
+</table>

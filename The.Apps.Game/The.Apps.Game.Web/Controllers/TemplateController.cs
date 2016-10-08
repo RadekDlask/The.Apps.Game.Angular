@@ -13,5 +13,10 @@ namespace The.Apps.Game.Web.Controllers
         {
             return PartialView(MVC.Questionnaire.Views._Questionnaire);
         }
+        // GET: Board
+        public virtual ActionResult Board()
+        {
+            return PartialView(MVC.Board.Views._Board);
+        }
     }
 }

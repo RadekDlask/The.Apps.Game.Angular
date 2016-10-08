@@ -33,6 +33,9 @@ namespace Core.Services {
         public getGameInit(id: number): string {
             return "/api/game/init?" + this.httpParamSerializer({ "id": id });
         }
+        public postResponse(id: number, state: number): string {
+            return "/api/game/response?" + this.httpParamSerializer({ "id": id, "state": state});
+        }
     }
     export class QuestionnaireApiNavigation {
         httpParamSerializer: angular.IHttpParamSerializer;

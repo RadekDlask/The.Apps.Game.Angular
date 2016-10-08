@@ -31,6 +31,7 @@ public static partial class MVC
     public static The.Apps.Game.Web.Controllers.HomeController Home = new The.Apps.Game.Web.Controllers.T4MVC_HomeController();
     public static The.Apps.Game.Web.Controllers.TemplateController Template = new The.Apps.Game.Web.Controllers.T4MVC_TemplateController();
     public static The.Apps.Game.Web.Controllers.TestController Test = new The.Apps.Game.Web.Controllers.T4MVC_TestController();
+    public static T4MVC.BoardController Board = new T4MVC.BoardController();
     public static T4MVC.QuestionnaireController Questionnaire = new T4MVC.QuestionnaireController();
     public static T4MVC.SharedController Shared = new T4MVC.SharedController();
 }
@@ -101,6 +102,17 @@ namespace Links
             public const string UrlPath = "~/Scripts/components";
             public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
             public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+            [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+            public static class board {
+                public const string UrlPath = "~/Scripts/components/board";
+                public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+                public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+                public static readonly string controllers_board_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/controllers-board.min.js") ? Url("controllers-board.min.js") : Url("controllers-board.js");
+                public static readonly string directives_board_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/directives-board.min.js") ? Url("directives-board.min.js") : Url("directives-board.js");
+                public static readonly string models_board_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/models-board.min.js") ? Url("models-board.min.js") : Url("models-board.js");
+                public static readonly string services_board_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/services-board.min.js") ? Url("services-board.min.js") : Url("services-board.js");
+            }
+        
             [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
             public static class common {
                 public const string UrlPath = "~/Scripts/components/common";
@@ -323,6 +335,12 @@ namespace Links
             }
             public static partial class components 
             {
+                public static partial class board 
+                {
+                    public static class Assets
+                    {
+                    }
+                }
                 public static partial class common 
                 {
                     public static class Assets

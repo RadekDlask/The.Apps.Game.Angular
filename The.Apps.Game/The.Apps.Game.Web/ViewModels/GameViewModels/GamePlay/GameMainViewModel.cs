@@ -6,7 +6,10 @@ namespace The.Apps.Game.Web.ViewModels.GameViewModels.GamePlay
 {
     [JsonObject("game")]
     public class GameMainViewModel : NamedViewModelBase
-    {
+    {        
+        [JsonProperty(PropertyName = "state")]
+        public GameMainStateViewModel GameMainState { get; set; }
+
         [JsonProperty(PropertyName = "questionnaire")]
         public QuestionnaireViewModel Questionaire { get; set; }
     }

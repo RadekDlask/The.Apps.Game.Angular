@@ -1,9 +1,11 @@
 ﻿"use strict";
-namespace App {
-    export class Application {
+namespace The.Apps {
+    export class Game {
         public static app: ng.IModule = angular.module("GameApp", [
-            "questionnaireDirective"
+            "questionnaireDirective",
+            "boardDirective"
         ]);
     }
 }
 angular.module("questionnaireDirective", []);
+angular.module("boardDirective", []);
