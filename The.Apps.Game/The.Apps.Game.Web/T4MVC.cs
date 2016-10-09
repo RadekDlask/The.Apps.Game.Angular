@@ -27,6 +27,7 @@ using T4MVC;
 [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
 public static partial class MVC
 {
+    public static The.Apps.Game.Web.Controllers.AccountController Account = new The.Apps.Game.Web.Controllers.T4MVC_AccountController();
     public static The.Apps.Game.Web.Controllers.GameController Game = new The.Apps.Game.Web.Controllers.T4MVC_GameController();
     public static The.Apps.Game.Web.Controllers.HomeController Home = new The.Apps.Game.Web.Controllers.T4MVC_HomeController();
     public static The.Apps.Game.Web.Controllers.TemplateController Template = new The.Apps.Game.Web.Controllers.T4MVC_TemplateController();

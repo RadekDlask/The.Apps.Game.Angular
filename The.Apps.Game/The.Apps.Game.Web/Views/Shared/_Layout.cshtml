@@ -8,7 +8,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
+<body> 
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -26,6 +26,19 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink(Labels.GameList_LinkText, MVC.Game.Index())</li>
                     <li>@Html.ActionLink("Test", MVC.Test.Index())</li>
+                    @{
+                        var principal = System.Threading.Thread.CurrentPrincipal;
+                        if (principal != null && principal.Identity.IsAuthenticated)
+                        {                            
+                            <li>@Html.ActionLink("Logout", MVC.Account.Logout())</li>
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("Register", MVC.Account.Register())</li>
+                            <li>@Html.ActionLink("Login", MVC.Account.Login())</li>
+                        }
+                    }
+                    
                 </ul>
             </div>
         </div>
@@ -37,7 +50,7 @@
             <p>&copy; @DateTime.Now.Year - Radek Dlask</p>
         </footer>
     </div>
-
+    <div id="overlay"></div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

@@ -254,4 +254,6 @@ paket-files/
 /The.Apps.Game/The.Apps.Game.Web/Scripts/components/*/*.js
 /The.Apps.Game/The.Apps.Game.Web/Scripts/apps/*.js.map
 /The.Apps.Game/The.Apps.Game.Web/Scripts/apps/*.js
+/The.Apps.Game/The.Apps.Game.Web/Scripts/page/*.js.map
+/The.Apps.Game/The.Apps.Game.Web/Scripts/page/*.js
 *.css

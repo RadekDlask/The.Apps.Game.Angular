@@ -18,5 +18,13 @@
   {
     "outputFile": "Content/bootstrap/bootstrap-black.css",
     "inputFile": "Content/bootstrap/bootstrap-black.less"
+  },
+  {
+    "outputFile": "Content/site.css",
+    "inputFile": "Content/site.less"
+  },
+  {
+    "outputFile": "Content/page.css",
+    "inputFile": "Content/page.less"
   }
 ]
