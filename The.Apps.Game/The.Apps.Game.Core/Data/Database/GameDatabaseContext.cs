@@ -11,6 +11,9 @@ namespace The.Apps.Game.Core.Data.Database
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<UserDetail> UserDetails { get; set; }
+        public DbSet<UserPersonal> UserPersonals { get; set; }
+        public DbSet<UserAddress> UserAddresses { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

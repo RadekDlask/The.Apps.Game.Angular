@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Principal;
+using System.Threading;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
@@ -10,6 +11,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using The.Apps.Game.Core.Logger;
 using The.Apps.Game.Web.App_Start;
+using The.Apps.Game.Web.Identity;
 
 namespace The.Apps.Game.Web
 {
@@ -43,11 +45,16 @@ namespace The.Apps.Game.Web
 
             if (ticket != null)
             {
-                var roles = ticket.UserData.Split(';');
-                if (Context.User != null)
-                {
-                    Context.User = new GenericPrincipal(Context.User.Identity, roles);
-                }
+                var splitBySections = ticket.UserData.Split(',');
+                var displayName = splitBySections[0];
+                var roles = splitBySections[1].Split(';');
+                var identity = new ExtendedGenericIdentity(ticket.Name, displayName);
+                Thread.CurrentPrincipal = new GenericPrincipal(identity, roles);
+                Context.User = Thread.CurrentPrincipal;
+                //if (Context.User != null)
+                //{                    
+                //    Context.User = new GenericPrincipal(Context.User.Identity, roles);
+                //}
             }
         }
     }

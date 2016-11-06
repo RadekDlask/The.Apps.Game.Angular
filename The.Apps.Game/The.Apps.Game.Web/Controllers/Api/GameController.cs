@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Web.Http;
+using The.Apps.Game.Core.Services.Users;
 using The.Apps.Game.Web.ViewModels.GameViewModels.GamePlay;
 using The.Apps.Game.Web.ViewModels.Questionnaire;
 
@@ -54,6 +55,7 @@ namespace The.Apps.Game.Web.Controllers.Api
             
         }
         [HttpGet]
+        [Authorize(Roles = UserRoles.User)]
         public GameMainViewModel Init(int id)
         {
             if (id < 1)

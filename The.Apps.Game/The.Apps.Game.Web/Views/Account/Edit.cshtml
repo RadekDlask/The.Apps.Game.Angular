@@ -1,14 +1,14 @@
 ﻿@using The.Apps.Game.Web.Resources
-@model The.Apps.Game.Web.ViewModels.User.RegisterViewModel
+@model The.Apps.Game.Web.ViewModels.User.EditViewModel
 
 @{
-    ViewBag.Title = Labels.User_Caption_Register;
+    ViewBag.Title = Labels.User_Caption_Edit;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Labels.User_Caption_Register</h2>
+<h2>@string.Format("{0} - {1}", Model.Name, Labels.User_Caption_Edit)</h2>
 
-<form class="form-horizontal" method="post" action="@Url.Action(MVC.Account.Register())">
+<form class="form-horizontal" method="post" action="@Url.Action(MVC.Account.Edit())">
     @if (!string.IsNullOrWhiteSpace(Model.CustomError))
     {
         <div class="form-group">
@@ -19,29 +19,12 @@
         </div>
     }
     <fieldset>
-        <legend>@Labels.User_Section_General</legend>
         <div class="form-group">
             @Html.LabelFor(m => m.Name, new { @class = "control-label col-sm-2" })
             <div class="col-sm-10">
                 @Html.TextBoxFor(m => m.Name, new { @class = "form-control", placeholder = "login" })
                 <br />
                 @Html.ValidationMessageFor(m => m.Name)
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(m => m.Password, new { @class = "control-label col-sm-2" })
-            <div class="col-sm-10">
-                @Html.TextBoxFor(m => m.Password, new { @class = "form-control", placeholder = "password", type = "password" })
-                <br />
-                @Html.ValidationMessageFor(m => m.Password)
-            </div>
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(m => m.PasswordConfirmed, new { @class = "control-label col-sm-2" })
-            <div class="col-sm-10">
-                @Html.TextBoxFor(m => m.PasswordConfirmed, new { @class = "form-control", placeholder = "password", type = "password" })
-                <br />
-                @Html.ValidationMessageFor(m => m.PasswordConfirmed)
             </div>
         </div>
         <div class="form-group">
@@ -77,10 +60,15 @@
             </div>
         </div>
     </fieldset>
+    <fieldset>
+
+    </fieldset>
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
             @Html.ActionLink(Labels.Common_Back, MVC.Home.Index(), new { @class = "btn btn-default" })
-            <button type="submit" class="btn btn-success">@Labels.User_Action_Register</button>
+            @Html.ActionLink(Labels.User_Action_Details, MVC.Account.Details(), new { @class = "btn btn-default" })
+            @Html.ActionLink(Labels.User_Action_ChangePassword, MVC.Account.ChangePassword(), new { @class = "btn btn-default" })
+            <button type="submit" class="btn btn-success">@Labels.User_Action_Edit</button>
         </div>
     </div>
 </form>

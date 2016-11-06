@@ -17,6 +17,9 @@ namespace Game.Controllers {
         }
 
         public get isQuestionnaireShowed(): boolean {
+            if (!this.model || !this.model.game || !this.model.game.state) {
+                return false;
+            }
             return this.model.game.state.currentState === Game.Models.GameMainState.STATE_QUESTIONNAIRE;
         }
 

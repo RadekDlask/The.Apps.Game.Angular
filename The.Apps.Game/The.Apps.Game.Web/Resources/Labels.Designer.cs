@@ -61,6 +61,15 @@ namespace The.Apps.Game.Web.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Back.
+        /// </summary>
+        public static string Common_Back {
+            get {
+                return ResourceManager.GetString("Common_Back", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Play.
         /// </summary>
         public static string Game_Actions_Play {
@@ -120,6 +129,132 @@ namespace The.Apps.Game.Web.Resources {
         public static string Questionnaire_Action_AnswerToQuestion {
             get {
                 return ResourceManager.GetString("Questionnaire_Action_AnswerToQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change password.
+        /// </summary>
+        public static string User_Action_ChangePassword {
+            get {
+                return ResourceManager.GetString("User_Action_ChangePassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string User_Action_Details {
+            get {
+                return ResourceManager.GetString("User_Action_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm changes.
+        /// </summary>
+        public static string User_Action_Edit {
+            get {
+                return ResourceManager.GetString("User_Action_Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log in.
+        /// </summary>
+        public static string User_Action_Login {
+            get {
+                return ResourceManager.GetString("User_Action_Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register.
+        /// </summary>
+        public static string User_Action_Register {
+            get {
+                return ResourceManager.GetString("User_Action_Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password change.
+        /// </summary>
+        public static string User_Caption_ChangePassword {
+            get {
+                return ResourceManager.GetString("User_Caption_ChangePassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Details.
+        /// </summary>
+        public static string User_Caption_Details {
+            get {
+                return ResourceManager.GetString("User_Caption_Details", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit details.
+        /// </summary>
+        public static string User_Caption_Edit {
+            get {
+                return ResourceManager.GetString("User_Caption_Edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Log in with existing account.
+        /// </summary>
+        public static string User_Caption_Login {
+            get {
+                return ResourceManager.GetString("User_Caption_Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Register new user.
+        /// </summary>
+        public static string User_Caption_Register {
+            get {
+                return ResourceManager.GetString("User_Caption_Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Address.
+        /// </summary>
+        public static string User_Section_Address {
+            get {
+                return ResourceManager.GetString("User_Section_Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Detail.
+        /// </summary>
+        public static string User_Section_Detail {
+            get {
+                return ResourceManager.GetString("User_Section_Detail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to General.
+        /// </summary>
+        public static string User_Section_General {
+            get {
+                return ResourceManager.GetString("User_Section_General", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Personal.
+        /// </summary>
+        public static string User_Section_Personal {
+            get {
+                return ResourceManager.GetString("User_Section_Personal", resourceCulture);
             }
         }
     }

@@ -126,6 +126,9 @@
   <data name="Input_InvalidCharacter_Validation" xml:space="preserve">
     <value>{0} contains invalid character {1} .</value>
   </data>
+  <data name="Input_MaxLength_Validation" xml:space="preserve">
+    <value>The {0} must be  maximal {1} characters long.</value>
+  </data>
   <data name="Input_NotEqualTo_Validation" xml:space="preserve">
     <value>The {0} cannot be same as {1}.</value>
   </data>
@@ -135,14 +138,47 @@
   <data name="Input_Required_Validation" xml:space="preserve">
     <value>The field {0} is required.</value>
   </data>
+  <data name="Input_User_AboutMe" xml:space="preserve">
+    <value>About me</value>
+  </data>
+  <data name="Input_User_Age" xml:space="preserve">
+    <value>Age in years</value>
+  </data>
+  <data name="Input_User_Aka" xml:space="preserve">
+    <value>AKA - Also known as</value>
+  </data>
+  <data name="Input_User_Born" xml:space="preserve">
+    <value>Date of born</value>
+  </data>
+  <data name="Input_User_City" xml:space="preserve">
+    <value>City</value>
+  </data>
+  <data name="Input_User_Country" xml:space="preserve">
+    <value>Country</value>
+  </data>
   <data name="Input_User_Display" xml:space="preserve">
     <value>Displayed name</value>
   </data>
   <data name="Input_User_Email" xml:space="preserve">
     <value>Email</value>
   </data>
+  <data name="Input_User_FirstName" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="Input_User_Hobbies" xml:space="preserve">
+    <value>Hobbies - Separated by comma ','</value>
+  </data>
+  <data name="Input_User_LastName" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="Input_User_MiddleName" xml:space="preserve">
+    <value>Middle name</value>
+  </data>
   <data name="Input_User_Name" xml:space="preserve">
     <value>Login name</value>
+  </data>
+  <data name="Input_User_OriginalPassword" xml:space="preserve">
+    <value>Current Password</value>
   </data>
   <data name="Input_User_Password" xml:space="preserve">
     <value>Password</value>
@@ -150,7 +186,46 @@
   <data name="Input_User_PasswordConfirmed" xml:space="preserve">
     <value>Password confirmed</value>
   </data>
+  <data name="Input_User_Profession" xml:space="preserve">
+    <value>Profession</value>
+  </data>
+  <data name="Input_User_Sex" xml:space="preserve">
+    <value>Sex</value>
+  </data>
+  <data name="Input_User_ShareWith" xml:space="preserve">
+    <value>Share with</value>
+  </data>
+  <data name="Input_User_State" xml:space="preserve">
+    <value>State</value>
+  </data>
   <data name="Label_Error" xml:space="preserve">
     <value>Error</value>
+  </data>
+  <data name="Sex_Man" xml:space="preserve">
+    <value>Man</value>
+  </data>
+  <data name="Sex_Secret" xml:space="preserve">
+    <value>Secret</value>
+  </data>
+  <data name="Sex_Woman" xml:space="preserve">
+    <value>Woman</value>
+  </data>
+  <data name="ShareWith_ClanMembers" xml:space="preserve">
+    <value>Clan members</value>
+  </data>
+  <data name="ShareWith_Everyone" xml:space="preserve">
+    <value>Everyone</value>
+  </data>
+  <data name="ShareWith_Friends" xml:space="preserve">
+    <value>Friends</value>
+  </data>
+  <data name="ShareWith_FriendsAndClanMembers" xml:space="preserve">
+    <value>Friends and clan members</value>
+  </data>
+  <data name="ShareWith_NoOne" xml:space="preserve">
+    <value>No one</value>
+  </data>
+  <data name="ShareWith_RegisteredUsers" xml:space="preserve">
+    <value>Registered users</value>
   </data>
 </root>

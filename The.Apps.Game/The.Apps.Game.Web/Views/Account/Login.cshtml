@@ -1,11 +1,12 @@
-﻿@model The.Apps.Game.Web.ViewModels.User.LoginViewModel
+﻿@using The.Apps.Game.Web.Resources
+@model The.Apps.Game.Web.ViewModels.User.LoginViewModel
 
 @{
-    ViewBag.Title = "Login";
+    ViewBag.Title = Labels.User_Caption_Login;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Login</h2>
+<h2>@Labels.User_Caption_Login</h2>
 
 <form class="form-horizontal" method="post" action="@Url.Action(MVC.Account.Login())">   
     <div class="form-group">
@@ -35,7 +36,8 @@
     }
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-default">Login</button>
+            @Html.ActionLink(Labels.Common_Back, MVC.Home.Index(), new { @class = "btn btn-default" })
+            <button type="submit" class="btn btn-success">@Labels.User_Action_Login</button>
         </div>
     </div>
 </form>

@@ -141,4 +141,10 @@
   <data name="User_Validation_UnknownPasswordOrUser" xml:space="preserve">
     <value>Wrong user name or password.</value>
   </data>
+  <data name="User_Validation_UnknownUser" xml:space="preserve">
+    <value>User does not exists.</value>
+  </data>
+  <data name="User_Validation_WrongOriginalPassword" xml:space="preserve">
+    <value>The original password is wrong.</value>
+  </data>
 </root>

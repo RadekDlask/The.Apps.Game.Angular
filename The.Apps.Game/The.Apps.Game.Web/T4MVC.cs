@@ -158,6 +158,14 @@ namespace Links
         public static readonly string jquery_validate_unobtrusive_js = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/jquery.validate.unobtrusive.min.js") ? Url("jquery.validate.unobtrusive.min.js") : Url("jquery.validate.unobtrusive.js");
         public static readonly string jquery_validate_unobtrusive_min_js = Url("jquery.validate.unobtrusive.min.js");
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public static class page {
+            public const string UrlPath = "~/Scripts/page";
+            public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+            public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+            public static readonly string page_ts = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/page.min.js") ? Url("page.min.js") : Url("page.js");
+        }
+    
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public static class typings {
             public const string UrlPath = "~/Scripts/typings";
             public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
@@ -299,7 +307,16 @@ namespace Links
         public static readonly string game_less = Url("game.less");
         public static readonly string game_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/game.min.css") ? Url("game.min.css") : Url("game.css");
         public static readonly string game_min_css = Url("game.min.css");
-        public static readonly string Site_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/Site.min.css") ? Url("Site.min.css") : Url("Site.css");
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public static class page {
+            public const string UrlPath = "~/Content/page";
+            public static string Url() { return T4MVCHelpers.ProcessVirtualPath(UrlPath); }
+            public static string Url(string fileName) { return T4MVCHelpers.ProcessVirtualPath(UrlPath + "/" + fileName); }
+            public static readonly string page_less = Url("page.less");
+            public static readonly string page_css = T4MVCHelpers.IsProduction() && T4Extensions.FileExists(UrlPath + "/page.min.css") ? Url("page.min.css") : Url("page.css");
+            public static readonly string page_min_css = Url("page.min.css");
+        }
+    
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public static class themes {
             public const string UrlPath = "~/Content/themes";
@@ -364,6 +381,12 @@ namespace Links
                 {
                 }
             }
+            public static partial class page 
+            {
+                public static class Assets
+                {
+                }
+            }
             public static partial class typings 
             {
                 public static partial class angularjs 
@@ -407,6 +430,12 @@ namespace Links
                 {
                 }
             }
+            public static partial class page 
+            {
+                public static class Assets
+                {
+                }
+            }
             public static partial class themes 
             {
                 public static partial class black 
@@ -422,7 +451,6 @@ namespace Links
             public static class Assets
             {
                 public const string bootstrap_css = "~/Content/bootstrap.css";
-                public const string Site_css = "~/Content/Site.css";
             }
         }
     }

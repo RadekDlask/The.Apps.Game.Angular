@@ -88,6 +88,15 @@ namespace The.Apps.Game.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The {0} must be  maximal {1} characters long..
+        /// </summary>
+        public static string Input_MaxLength_Validation {
+            get {
+                return ResourceManager.GetString("Input_MaxLength_Validation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The {0} cannot be same as {1}..
         /// </summary>
         public static string Input_NotEqualTo_Validation {
@@ -115,6 +124,60 @@ namespace The.Apps.Game.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to About me.
+        /// </summary>
+        public static string Input_User_AboutMe {
+            get {
+                return ResourceManager.GetString("Input_User_AboutMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Age in years.
+        /// </summary>
+        public static string Input_User_Age {
+            get {
+                return ResourceManager.GetString("Input_User_Age", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AKA - Also known as.
+        /// </summary>
+        public static string Input_User_Aka {
+            get {
+                return ResourceManager.GetString("Input_User_Aka", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date of born.
+        /// </summary>
+        public static string Input_User_Born {
+            get {
+                return ResourceManager.GetString("Input_User_Born", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to City.
+        /// </summary>
+        public static string Input_User_City {
+            get {
+                return ResourceManager.GetString("Input_User_City", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Country.
+        /// </summary>
+        public static string Input_User_Country {
+            get {
+                return ResourceManager.GetString("Input_User_Country", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Displayed name.
         /// </summary>
         public static string Input_User_Display {
@@ -133,11 +196,56 @@ namespace The.Apps.Game.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to First name.
+        /// </summary>
+        public static string Input_User_FirstName {
+            get {
+                return ResourceManager.GetString("Input_User_FirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hobbies - Separated by comma &apos;,&apos;.
+        /// </summary>
+        public static string Input_User_Hobbies {
+            get {
+                return ResourceManager.GetString("Input_User_Hobbies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Last name.
+        /// </summary>
+        public static string Input_User_LastName {
+            get {
+                return ResourceManager.GetString("Input_User_LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Middle name.
+        /// </summary>
+        public static string Input_User_MiddleName {
+            get {
+                return ResourceManager.GetString("Input_User_MiddleName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Login name.
         /// </summary>
         public static string Input_User_Name {
             get {
                 return ResourceManager.GetString("Input_User_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current Password.
+        /// </summary>
+        public static string Input_User_OriginalPassword {
+            get {
+                return ResourceManager.GetString("Input_User_OriginalPassword", resourceCulture);
             }
         }
         
@@ -160,11 +268,128 @@ namespace The.Apps.Game.Core.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Profession.
+        /// </summary>
+        public static string Input_User_Profession {
+            get {
+                return ResourceManager.GetString("Input_User_Profession", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sex.
+        /// </summary>
+        public static string Input_User_Sex {
+            get {
+                return ResourceManager.GetString("Input_User_Sex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Share with.
+        /// </summary>
+        public static string Input_User_ShareWith {
+            get {
+                return ResourceManager.GetString("Input_User_ShareWith", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to State.
+        /// </summary>
+        public static string Input_User_State {
+            get {
+                return ResourceManager.GetString("Input_User_State", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         public static string Label_Error {
             get {
                 return ResourceManager.GetString("Label_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Man.
+        /// </summary>
+        public static string Sex_Man {
+            get {
+                return ResourceManager.GetString("Sex_Man", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Secret.
+        /// </summary>
+        public static string Sex_Secret {
+            get {
+                return ResourceManager.GetString("Sex_Secret", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Woman.
+        /// </summary>
+        public static string Sex_Woman {
+            get {
+                return ResourceManager.GetString("Sex_Woman", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clan members.
+        /// </summary>
+        public static string ShareWith_ClanMembers {
+            get {
+                return ResourceManager.GetString("ShareWith_ClanMembers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Everyone.
+        /// </summary>
+        public static string ShareWith_Everyone {
+            get {
+                return ResourceManager.GetString("ShareWith_Everyone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Friends.
+        /// </summary>
+        public static string ShareWith_Friends {
+            get {
+                return ResourceManager.GetString("ShareWith_Friends", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Friends and clan members.
+        /// </summary>
+        public static string ShareWith_FriendsAndClanMembers {
+            get {
+                return ResourceManager.GetString("ShareWith_FriendsAndClanMembers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No one.
+        /// </summary>
+        public static string ShareWith_NoOne {
+            get {
+                return ResourceManager.GetString("ShareWith_NoOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Registered users.
+        /// </summary>
+        public static string ShareWith_RegisteredUsers {
+            get {
+                return ResourceManager.GetString("ShareWith_RegisteredUsers", resourceCulture);
             }
         }
     }

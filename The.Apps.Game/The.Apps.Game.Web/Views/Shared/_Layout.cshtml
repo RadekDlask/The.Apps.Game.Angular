@@ -9,7 +9,7 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body> 
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -26,10 +26,13 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink(Labels.GameList_LinkText, MVC.Game.Index())</li>
                     <li>@Html.ActionLink("Test", MVC.Test.Index())</li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
                     @{
                         var principal = System.Threading.Thread.CurrentPrincipal;
                         if (principal != null && principal.Identity.IsAuthenticated)
-                        {                            
+                        {
+                            <li>@Html.ActionLink(@The.Apps.Game.Web.Identity.ExtendedGenericIdentity.GetCurrentUserDisplayName(), MVC.Account.Edit())</li>
                             <li>@Html.ActionLink("Logout", MVC.Account.Logout())</li>
                         }
                         else
@@ -38,7 +41,6 @@
                             <li>@Html.ActionLink("Login", MVC.Account.Login())</li>
                         }
                     }
-                    
                 </ul>
             </div>
         </div>

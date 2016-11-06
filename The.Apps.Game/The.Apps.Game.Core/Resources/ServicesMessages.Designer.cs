@@ -131,5 +131,23 @@ namespace The.Apps.Game.Core.Resources {
                 return ResourceManager.GetString("User_Validation_UnknownPasswordOrUser", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User does not exists..
+        /// </summary>
+        public static string User_Validation_UnknownUser {
+            get {
+                return ResourceManager.GetString("User_Validation_UnknownUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The original password is wrong..
+        /// </summary>
+        public static string User_Validation_WrongOriginalPassword {
+            get {
+                return ResourceManager.GetString("User_Validation_WrongOriginalPassword", resourceCulture);
+            }
+        }
     }
 }

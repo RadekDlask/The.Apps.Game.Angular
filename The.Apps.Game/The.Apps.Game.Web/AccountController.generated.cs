@@ -72,20 +72,34 @@ namespace The.Apps.Game.Web.Controllers
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNamesClass
         {
+            public readonly string Register = "Register";
             public readonly string Login = "Login";
             public readonly string Logout = "Logout";
-            public readonly string Register = "Register";
+            public readonly string Edit = "Edit";
+            public readonly string Details = "Details";
+            public readonly string ChangePassword = "ChangePassword";
         }
 
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public class ActionNameConstants
         {
+            public const string Register = "Register";
             public const string Login = "Login";
             public const string Logout = "Logout";
-            public const string Register = "Register";
+            public const string Edit = "Edit";
+            public const string Details = "Details";
+            public const string ChangePassword = "ChangePassword";
         }
 
 
+        static readonly ActionParamsClass_Register s_params_Register = new ActionParamsClass_Register();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_Register RegisterParams { get { return s_params_Register; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_Register
+        {
+            public readonly string register = "register";
+        }
         static readonly ActionParamsClass_Login s_params_Login = new ActionParamsClass_Login();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
         public ActionParamsClass_Login LoginParams { get { return s_params_Login; } }
@@ -94,11 +108,27 @@ namespace The.Apps.Game.Web.Controllers
         {
             public readonly string login = "login";
         }
-        static readonly ActionParamsClass_Register s_params_Register = new ActionParamsClass_Register();
+        static readonly ActionParamsClass_Edit s_params_Edit = new ActionParamsClass_Edit();
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public ActionParamsClass_Register RegisterParams { get { return s_params_Register; } }
+        public ActionParamsClass_Edit EditParams { get { return s_params_Edit; } }
         [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
-        public class ActionParamsClass_Register
+        public class ActionParamsClass_Edit
+        {
+            public readonly string register = "register";
+        }
+        static readonly ActionParamsClass_Details s_params_Details = new ActionParamsClass_Details();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_Details DetailsParams { get { return s_params_Details; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_Details
+        {
+            public readonly string details = "details";
+        }
+        static readonly ActionParamsClass_ChangePassword s_params_ChangePassword = new ActionParamsClass_ChangePassword();
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public ActionParamsClass_ChangePassword ChangePasswordParams { get { return s_params_ChangePassword; } }
+        [GeneratedCode("T4MVC", "2.0"), DebuggerNonUserCode]
+        public class ActionParamsClass_ChangePassword
         {
             public readonly string register = "register";
         }
@@ -112,9 +142,15 @@ namespace The.Apps.Game.Web.Controllers
             public _ViewNamesClass ViewNames { get { return s_ViewNames; } }
             public class _ViewNamesClass
             {
+                public readonly string Details = "Details";
+                public readonly string Edit = "Edit";
+                public readonly string ChangePassword = "ChangePassword";
                 public readonly string Login = "Login";
                 public readonly string Register = "Register";
             }
+            public readonly string Details = "~/Views/Account/Details.cshtml";
+            public readonly string Edit = "~/Views/Account/Edit.cshtml";
+            public readonly string ChangePassword = "~/Views/Account/ChangePassword.cshtml";
             public readonly string Login = "~/Views/Account/Login.cshtml";
             public readonly string Register = "~/Views/Account/Register.cshtml";
         }
@@ -124,6 +160,40 @@ namespace The.Apps.Game.Web.Controllers
     public partial class T4MVC_AccountController : The.Apps.Game.Web.Controllers.AccountController
     {
         public T4MVC_AccountController() : base(Dummy.Instance) { }
+
+        [NonAction]
+        partial void RegisterOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult Register()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Register);
+            RegisterOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void RegisterOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, The.Apps.Game.Web.ViewModels.User.RegisterViewModel register);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult Register(The.Apps.Game.Web.ViewModels.User.RegisterViewModel register)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Register);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "register", register);
+            RegisterOverride(callInfo, register);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void LoginOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult Login()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Login);
+            LoginOverride(callInfo);
+            return callInfo;
+        }
 
         [NonAction]
         partial void LoginOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, The.Apps.Game.Web.ViewModels.User.LoginViewModel login);
@@ -149,36 +219,71 @@ namespace The.Apps.Game.Web.Controllers
         }
 
         [NonAction]
-        partial void LoginOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+        partial void EditOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult Login()
+        public override System.Web.Mvc.ActionResult Edit()
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Login);
-            LoginOverride(callInfo);
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Edit);
+            EditOverride(callInfo);
             return callInfo;
         }
 
         [NonAction]
-        partial void RegisterOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, The.Apps.Game.Web.ViewModels.User.RegisterViewModel register);
+        partial void EditOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, The.Apps.Game.Web.ViewModels.User.EditViewModel register);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult Register(The.Apps.Game.Web.ViewModels.User.RegisterViewModel register)
+        public override System.Web.Mvc.ActionResult Edit(The.Apps.Game.Web.ViewModels.User.EditViewModel register)
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Register);
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Edit);
             ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "register", register);
-            RegisterOverride(callInfo, register);
+            EditOverride(callInfo, register);
             return callInfo;
         }
 
         [NonAction]
-        partial void RegisterOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+        partial void DetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
 
         [NonAction]
-        public override System.Web.Mvc.ActionResult Register()
+        public override System.Web.Mvc.ActionResult Details()
         {
-            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Register);
-            RegisterOverride(callInfo);
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Details);
+            DetailsOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void DetailsOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, The.Apps.Game.Web.ViewModels.User.DetailsViewModel details);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult Details(The.Apps.Game.Web.ViewModels.User.DetailsViewModel details)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.Details);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "details", details);
+            DetailsOverride(callInfo, details);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void ChangePasswordOverride(T4MVC_System_Web_Mvc_ActionResult callInfo);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult ChangePassword()
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ChangePassword);
+            ChangePasswordOverride(callInfo);
+            return callInfo;
+        }
+
+        [NonAction]
+        partial void ChangePasswordOverride(T4MVC_System_Web_Mvc_ActionResult callInfo, The.Apps.Game.Web.ViewModels.User.ChangePasswordViewModel register);
+
+        [NonAction]
+        public override System.Web.Mvc.ActionResult ChangePassword(The.Apps.Game.Web.ViewModels.User.ChangePasswordViewModel register)
+        {
+            var callInfo = new T4MVC_System_Web_Mvc_ActionResult(Area, Name, ActionNames.ChangePassword);
+            ModelUnbinderHelpers.AddRouteValues(callInfo.RouteValueDictionary, "register", register);
+            ChangePasswordOverride(callInfo, register);
             return callInfo;
         }
 

@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Common_Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
   <data name="GameDescription_Title" xml:space="preserve">
     <value>Game description</value>
   </data>
@@ -137,5 +140,47 @@
   </data>
   <data name="Questionnaire_Action_AnswerToQuestion" xml:space="preserve">
     <value>Answer</value>
+  </data>
+  <data name="User_Action_ChangePassword" xml:space="preserve">
+    <value>Change password</value>
+  </data>
+  <data name="User_Action_Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="User_Action_Edit" xml:space="preserve">
+    <value>Confirm changes</value>
+  </data>
+  <data name="User_Action_Login" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="User_Action_Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="User_Caption_ChangePassword" xml:space="preserve">
+    <value>Password change</value>
+  </data>
+  <data name="User_Caption_Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="User_Caption_Edit" xml:space="preserve">
+    <value>Edit details</value>
+  </data>
+  <data name="User_Caption_Login" xml:space="preserve">
+    <value>Log in with existing account</value>
+  </data>
+  <data name="User_Caption_Register" xml:space="preserve">
+    <value>Register new user</value>
+  </data>
+  <data name="User_Section_Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="User_Section_Detail" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="User_Section_General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="User_Section_Personal" xml:space="preserve">
+    <value>Personal</value>
   </data>
 </root>

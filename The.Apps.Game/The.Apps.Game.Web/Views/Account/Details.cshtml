@@ -1,0 +1,121 @@
+﻿@using The.Apps.Game.Web.Resources
+@model The.Apps.Game.Web.ViewModels.User.DetailsViewModel
+
+@{
+    ViewBag.Title = Labels.User_Caption_Details;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@string.Format("{0} - {1}", Model.Name, Labels.User_Caption_Details)</h2>
+<h3></h3>
+<form class="form-horizontal" method="post" action="@Url.Action(MVC.Account.Details())">
+    @if (!string.IsNullOrWhiteSpace(Model.CustomError))
+    {
+        <div class="form-group">
+            @Html.LabelFor(m => m.CustomError, new { @class = "control-label col-sm-2" })
+            <div class="col-sm-10">
+                <div class="alert alert-danger">@Model.CustomError</div>
+            </div>
+        </div>
+    }
+    <fieldset>
+        <legend>@Labels.User_Section_Detail</legend>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Detail.ShareWith, new { @class = "control-label col-sm-2" })
+            <div class="col-sm-10">
+                @Html.EnumDropDownListFor(m => m.Detail.ShareWith, new { @class = "form-control" })
+                <br />
+                @Html.ValidationMessageFor(m => m.Detail.ShareWith)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Detail.AboutMe, new { @class = "control-label col-sm-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.Detail.AboutMe, new { @class = "form-control", placeholder = "about me" })
+                <br />
+                @Html.ValidationMessageFor(m => m.Detail.AboutMe)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Detail.Age, new { @class = "control-label col-sm-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.Detail.Age, new { @class = "form-control", placeholder = "age" })
+                <br />
+                @Html.ValidationMessageFor(m => m.Detail.Age)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Detail.Aka, new { @class = "control-label col-sm-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.Detail.Aka, new { @class = "form-control", placeholder = "AKA" })
+                <br />
+                @Html.ValidationMessageFor(m => m.Detail.Aka)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Detail.Hobbies, new { @class = "control-label col-sm-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.Detail.Hobbies, new { @class = "form-control", placeholder = "hobies" })
+                <br />
+                @Html.ValidationMessageFor(m => m.Detail.Hobbies)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Detail.Profession, new { @class = "control-label col-sm-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.Detail.Profession, new { @class = "form-control", placeholder = "profssion" })
+                <br />
+                @Html.ValidationMessageFor(m => m.Detail.Profession)
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>@Labels.User_Section_Personal</legend>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Personal.ShareWith, new { @class = "control-label col-sm-2" })
+            <div class="col-sm-10">
+                @Html.EnumDropDownListFor(m => m.Personal.ShareWith, new { @class = "form-control" })
+                <br />
+                @Html.ValidationMessageFor(m => m.Personal.ShareWith)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Personal.Born, new { @class = "control-label col-sm-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.Personal.Born, new { @class = "form-control datepicker" })
+                <br />
+                @Html.ValidationMessageFor(m => m.Personal.Born)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Personal.FirstName, new { @class = "control-label col-sm-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.Personal.FirstName, new { @class = "form-control", placeholder = "first name" })
+                <br />
+                @Html.ValidationMessageFor(m => m.Personal.FirstName)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Personal.MiddleName, new { @class = "control-label col-sm-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.Personal.MiddleName, new { @class = "form-control", placeholder = "middle name" })
+                <br />
+                @Html.ValidationMessageFor(m => m.Personal.MiddleName)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Personal.LastName, new { @class = "control-label col-sm-2" })
+            <div class="col-sm-10">
+                @Html.TextBoxFor(m => m.Personal.LastName, new { @class = "form-control", placeholder = "last name" })
+                <br />
+                @Html.ValidationMessageFor(m => m.Personal.LastName)
+            </div>
+        </div>
+    </fieldset>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            @Html.ActionLink(Labels.Common_Back, MVC.Account.Edit(), new { @class = "btn btn-default" })
+            <button type="submit" class="btn btn-success">@Labels.User_Action_Edit</button>
+        </div>
+    </div>
+</form>
